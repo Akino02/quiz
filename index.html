@@ -9,8 +9,8 @@
   </head>
   <body>
     <div id="container">
-        <div class="name">Quiz</div>
-        <div id="start">Start</div>
+      <div id="name">Quiz</div>
+      <div id="start">Start</div>
       <div id="quiz">
         <div id="question"></div>
         <div id="odpovedi">
@@ -21,8 +21,20 @@
         </div>
         <div id="next">Dalsi</div>
       </div>
-      <div id="body"></div>
-      <div id="log"><p>Špatné odpovědi</p></div>
+      <table id="konec">
+        <tr>
+          <th>Vaše úspěšnost:</th>
+          <td id="body"></td>
+          <td id="procenta"></td>
+        </tr>
+      </table>
+      <div id="wrongcontainer">
+        <h3>Špatné odpovědi:</h3>
+        <div id="log"></div>
+      </div>
+      <!--<div id="body"></div>-->
+      <!--<div id="procenta"></div>-->
+      <!--<div id="log"><p>Špatné odpovědi:</p></div>-->
     </div>
     <script src="./res/js/main.js"></script>
   </body>

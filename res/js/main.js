@@ -1,4 +1,5 @@
 const start = document.getElementById("start");
+const title = document.getElementById("name");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const answer = document.getElementsByClassName("odpoved");
@@ -10,8 +11,12 @@ const od4 = document.getElementById("od4");
 const next = document.getElementById("next");
 const body = document.getElementById("body");
 const log = document.getElementById("log");
+const procenta = document.getElementById("procenta");
+const wrongcontainer = document.getElementById("wrongcontainer");
+const konec = document.getElementById("konec");
 let id = 0;
 let correct = 0;
+let cviceni = 1;
 
 const Questions = [
   {
@@ -55,6 +60,8 @@ start.addEventListener("click", () => {
   start.style.display = "none";
   quiz.style.display = "block";
   next.style.display = "flex";
+  log.style.display = "block";
+  title.style.marginBottom = "0px";
   question.innerText = Questions[id].q;
   od1.innerText = Questions[id].a[0].text;
   od2.innerText = Questions[id].a[1].text;
@@ -105,9 +112,12 @@ next.addEventListener("click", () => {
     if (selected == "true") {
       correct++;
     } else {
-      log.innerHTML += `<p>${id + 1}. otázka</p>`;
+      log.innerHTML += `${id + 1}. otázka: `;
+      log.innerHTML += `${Questions[id].q}<br>`;
     }
     id++;
+    cviceni++;
+
     question.innerText = Questions[id].q;
     od1.innerText = Questions[id].a[0].text;
     od2.innerText = Questions[id].a[1].text;
@@ -123,10 +133,16 @@ next.addEventListener("click", () => {
     od4.style.backgroundColor = "lightskyblue";
     selected = "";
     if (id == 3) {
+      let b = (100 * correct) / 3;
       quiz.style.display = "none";
       next.style.display = "none";
       body.style.display = "flex";
-      body.innerHTML = correct + "/" + id;
+      if (log.innerHTML != "") {
+        wrongcontainer.style.display = "block";
+      }
+      body.innerHTML += `${correct + "/" + id}`;
+      procenta.innerHTML += `${b.toFixed(1)}%`;
+      konec.style.display = "block";
     }
   }
 });

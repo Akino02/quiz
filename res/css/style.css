@@ -5,16 +5,17 @@
 }
 #container{
     border: 2px solid black;
-    width: 700px;
-    height: 500px;
+    width: 1400px;
+    height: 800px;
     margin: 0 auto;
     padding: 10px;
 }
-.name{
+#name{
     width: 100%;
     height: 50px;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 200px;
     font-size: 30px;
 }
 #start{
@@ -25,8 +26,7 @@
     background-color: grey;
     width: 75px;
     height: 50px;
-    margin-left: 45%;
-    margin-top: 200px;
+    margin: 0 auto;
     cursor: pointer;
 }
 #start:hover{
@@ -71,12 +71,22 @@
     align-items: center;
     cursor: pointer;
 }
-#body{
-    display: none;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+table, th, td, tr{
+    border: 1px solid black;
+    /*border-collapse: collapse;*/
+    text-align: center;
+}
+td{
     width: 50px;
-    height: 50px;
-    background-color: red;
+}
+#wrongcontainer{
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+#konec{
+    display: none;
+    width: 230px;
+    margin: 0 auto;
 }
