@@ -2,22 +2,27 @@ const start = document.getElementById("start");
 const title = document.getElementById("name");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
-const answer = document.getElementsByClassName("odpoved");
-const odpovedi = document.getElementById("odpovedi");
+const answer = document.getElementsByClassName("answer");
 const od1 = document.getElementById("od1");
 const od2 = document.getElementById("od2");
 const od3 = document.getElementById("od3");
 const od4 = document.getElementById("od4");
 const next = document.getElementById("next");
-const body = document.getElementById("body");
+const points = document.getElementById("points");
 const log = document.getElementById("log");
-const procenta = document.getElementById("procenta");
+const procents = document.getElementById("procents");
 const wrongcontainer = document.getElementById("wrongcontainer");
-const konec = document.getElementById("konec");
+const end = document.getElementById("end");
+const timer = document.getElementById("timer");
 let id = 0;
 let correct = 0;
 let cviceni = 1;
+let sec = 0;
+let desec = 0;
+let min = 0;
+let demin = 0;
 
+//quetions
 const Questions = [
   {
     id: 0,
@@ -41,7 +46,7 @@ const Questions = [
   },
   {
     id: 2,
-    q: "Co je volatilní",
+    q: "Co je z toho volatilní",
     a: [
       { text: "HDD", isCorrect: false },
       { text: "SDD", isCorrect: false },
@@ -51,7 +56,17 @@ const Questions = [
   },
   {
     id: 3,
-    q: "Konec",
+    q: "Z čeho se vyrábí procesor(CPU)",
+    a: [
+      { text: "Křemíku", isCorrect: true },
+      { text: "Dřeva", isCorrect: false },
+      { text: "Bronzu", isCorrect: false },
+      { text: "Hliníku", isCorrect: false },
+    ],
+  },
+  {
+    id: 4,
+    q: "end",
     a: [{ text: "" }, { text: "" }, { text: "" }, { text: "" }],
   },
 ];
@@ -62,6 +77,7 @@ start.addEventListener("click", () => {
   next.style.display = "flex";
   log.style.display = "block";
   title.style.marginBottom = "0px";
+  //setquestions
   question.innerText = Questions[id].q;
   od1.innerText = Questions[id].a[0].text;
   od2.innerText = Questions[id].a[1].text;
@@ -71,10 +87,27 @@ start.addEventListener("click", () => {
   od2.value = Questions[id].a[1].isCorrect;
   od3.value = Questions[id].a[2].isCorrect;
   od4.value = Questions[id].a[3].isCorrect;
+  //timer
+  setInterval(() => {
+    if (desec % 5 == 0 && sec % 9 == 0 && desec != 0 && sec != 0) {
+      sec = 0;
+      desec = 0;
+      min++;
+      /*time.innerHTML = `${min + ":" + desec + "" + sec}`;*/
+    } else if (sec % 9 == 0 && sec != 0) {
+      sec = 0;
+      desec++;
+      /*time.innerHTML = `${min + ":" + desec + "" + sec}`;*/
+    }
+    else{
+      sec++;
+    }
+    timer.innerHTML = `${min}:${desec}${sec}`
+  }, 1000);
 });
 
 let selected = "";
-
+//selector
 od1.addEventListener("click", () => {
   od1.style.backgroundColor = "lightgoldenrodyellow";
   od2.style.backgroundColor = "lightskyblue";
@@ -132,17 +165,19 @@ next.addEventListener("click", () => {
     od3.style.backgroundColor = "lightskyblue";
     od4.style.backgroundColor = "lightskyblue";
     selected = "";
-    if (id == 3) {
-      let b = (100 * correct) / 3;
+    //result
+    if (id == 4) {
+      let b = (100 * correct) / 4;
       quiz.style.display = "none";
       next.style.display = "none";
-      body.style.display = "flex";
+      points.style.display = "flex";
       if (log.innerHTML != "") {
         wrongcontainer.style.display = "block";
       }
-      body.innerHTML += `${correct + "/" + id}`;
-      procenta.innerHTML += `${b.toFixed(1)}%`;
-      konec.style.display = "block";
+      points.innerHTML += `${correct + "/" + id}`;
+      procents.innerHTML += `${b.toFixed(1)}%`;
+      title.style.marginBottom = "125px"
+      end.style.display = "block";
     }
   }
 });
