@@ -8,20 +8,24 @@
     <link rel="stylesheet" href="./res/css/style.css" />
   </head>
   <body>
-    <div id="leaderboard">
-      <div id="timer">0:00</div>
-      
-    </div>
+    <div id="leaderboard"></div>
     <div id="container">
-      <div id="name">Quiz<p>Hardware</p></div>
+      <div id="name">
+        Quiz
+        <p>Hardware</p>
+      </div>
       <div id="start">Start</div>
       <div id="quiz">
         <div id="question"></div>
         <div id="answers">
-          <button class="answer" id="od1"></button>
-          <button class="answer" id="od2"></button>
-          <button class="answer" id="od3"></button>
-          <button class="answer" id="od4"></button>
+          <div class="row">
+            <button class="answer" id="od1"></button>
+            <button class="answer" id="od2"></button>
+          </div>
+          <div class="row">
+            <button class="answer" id="od3"></button>
+            <button class="answer" id="od4"></button>
+          </div>
         </div>
         <div id="next">Dalsi</div>
       </div>
@@ -30,6 +34,10 @@
           <th>Vaše úspěšnost:</th>
           <td id="points"></td>
           <td id="procents"></td>
+        </tr>
+        <tr>
+          <th>Doba vypracování</th>
+          <td id="timer" colspan="2"></td>
         </tr>
       </table>
       <div id="wrongcontainer">

@@ -21,6 +21,7 @@ let sec = 0;
 let desec = 0;
 let min = 0;
 let demin = 0;
+let clock;
 
 //quetions
 const Questions = [
@@ -88,21 +89,18 @@ start.addEventListener("click", () => {
   od3.value = Questions[id].a[2].isCorrect;
   od4.value = Questions[id].a[3].isCorrect;
   //timer
-  setInterval(() => {
+  clock = setInterval(() => {
     if (desec % 5 == 0 && sec % 9 == 0 && desec != 0 && sec != 0) {
       sec = 0;
       desec = 0;
       min++;
-      /*time.innerHTML = `${min + ":" + desec + "" + sec}`;*/
     } else if (sec % 9 == 0 && sec != 0) {
       sec = 0;
       desec++;
-      /*time.innerHTML = `${min + ":" + desec + "" + sec}`;*/
-    }
-    else{
+    } else {
       sec++;
     }
-    timer.innerHTML = `${min}:${desec}${sec}`
+    timer.innerHTML = `${min}:${desec}${sec}`;
   }, 1000);
 });
 
@@ -167,6 +165,7 @@ next.addEventListener("click", () => {
     selected = "";
     //result
     if (id == 4) {
+      clearInterval(clock);
       let b = (100 * correct) / 4;
       quiz.style.display = "none";
       next.style.display = "none";
@@ -176,7 +175,7 @@ next.addEventListener("click", () => {
       }
       points.innerHTML += `${correct + "/" + id}`;
       procents.innerHTML += `${b.toFixed(1)}%`;
-      title.style.marginBottom = "125px"
+      title.style.marginBottom = "125px";
       end.style.display = "block";
     }
   }
