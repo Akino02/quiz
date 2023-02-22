@@ -23,8 +23,126 @@ let min = 0;
 let demin = 0;
 let clock;
 
+window.onload = async () => {
+  const file = await fetch("./res/data/quiz1.json");
+
+  const Questions = await file.json(file);
+
+  console.log(Questions[5].numq)
+
+  start.addEventListener("click", () => {
+    start.style.display = "none";
+    quiz.style.display = "block";
+    next.style.display = "flex";
+    log.style.display = "block";
+    title.style.marginBottom = "0px";
+    //setquestions
+    question.innerText = Questions[id].q;
+    od1.innerText = Questions[id].text[0];
+    od2.innerText = Questions[id].text[1];
+    od3.innerText = Questions[id].text[2];
+    od4.innerText = Questions[id].text[3];
+    od1.value = Questions[id].isCorrect[0];
+    od2.value = Questions[id].isCorrect[1];
+    od3.value = Questions[id].isCorrect[2];
+    od4.value = Questions[id].isCorrect[3];
+    //timer
+    clock = setInterval(() => {
+      if (desec % 5 == 0 && sec % 9 == 0 && desec != 0 && sec != 0) {
+        sec = 0;
+        desec = 0;
+        min++;
+      } else if (sec % 9 == 0 && sec != 0) {
+        sec = 0;
+        desec++;
+      } else {
+        sec++;
+      }
+      timer.innerHTML = `${min}:${desec}${sec}`;
+    }, 1000);
+  });
+  
+  let selected = "";
+  //selector
+  od1.addEventListener("click", () => {
+    od1.style.backgroundColor = "lightgoldenrodyellow";
+    od2.style.backgroundColor = "lightskyblue";
+    od3.style.backgroundColor = "lightskyblue";
+    od4.style.backgroundColor = "lightskyblue";
+    selected = od1.value;
+  });
+  
+  od2.addEventListener("click", () => {
+    od1.style.backgroundColor = "lightskyblue";
+    od2.style.backgroundColor = "lightgoldenrodyellow";
+    od3.style.backgroundColor = "lightskyblue";
+    od4.style.backgroundColor = "lightskyblue";
+    selected = od2.value;
+  });
+  
+  od3.addEventListener("click", () => {
+    od1.style.backgroundColor = "lightskyblue";
+    od2.style.backgroundColor = "lightskyblue";
+    od3.style.backgroundColor = "lightgoldenrodyellow";
+    od4.style.backgroundColor = "lightskyblue";
+    selected = od3.value;
+  });
+  
+  od4.addEventListener("click", () => {
+    od1.style.backgroundColor = "lightskyblue";
+    od2.style.backgroundColor = "lightskyblue";
+    od3.style.backgroundColor = "lightskyblue";
+    od4.style.backgroundColor = "lightgoldenrodyellow";
+    selected = od4.value;
+  });
+
+  let check = Questions[5].numq;
+
+  next.addEventListener("click", () => {
+    if (selected != "") {
+      if (selected == "true") {
+        correct++;
+      } else {
+        log.innerHTML += `${id + 1}. otázka: `;
+        log.innerHTML += `${Questions[id].q}<br>`;
+      }
+      id++;
+      cviceni++;
+      console.log(id);
+      question.innerText = Questions[id].q;
+      od1.innerText = Questions[id].text[0];
+      od2.innerText = Questions[id].text[1];
+      od3.innerText = Questions[id].text[2];
+      od4.innerText = Questions[id].text[3];
+      od1.value = Questions[id].isCorrect[0];
+      od2.value = Questions[id].isCorrect[1];
+      od3.value = Questions[id].isCorrect[2];
+      od4.value = Questions[id].isCorrect[3];
+      od1.style.backgroundColor = "lightskyblue";
+      od2.style.backgroundColor = "lightskyblue";
+      od3.style.backgroundColor = "lightskyblue";
+      od4.style.backgroundColor = "lightskyblue";
+      selected = "";
+      //result
+      if (id == check) {
+        clearInterval(clock);
+        let b = (100 * correct) / id;
+        quiz.style.display = "none";
+        next.style.display = "none";
+        points.style.display = "flex";
+        if (log.innerHTML != "") {
+          wrongcontainer.style.display = "block";
+        }
+        points.innerHTML += `${correct + "/" + id}`;
+        procents.innerHTML += `${b.toFixed(1)}%`;
+        title.style.marginBottom = "125px";
+        end.style.display = "block";
+      }
+    }
+  });
+};
 //quetions
-const Questions = [
+/*const Questions = [
   {
     id: 0,
     q: "Jaké maximální napětí naměříme v počítači",
@@ -70,113 +188,4 @@ const Questions = [
     q: "end",
     a: [{ text: "" }, { text: "" }, { text: "" }, { text: "" }],
   },
-];
-
-start.addEventListener("click", () => {
-  start.style.display = "none";
-  quiz.style.display = "block";
-  next.style.display = "flex";
-  log.style.display = "block";
-  title.style.marginBottom = "0px";
-  //setquestions
-  question.innerText = Questions[id].q;
-  od1.innerText = Questions[id].a[0].text;
-  od2.innerText = Questions[id].a[1].text;
-  od3.innerText = Questions[id].a[2].text;
-  od4.innerText = Questions[id].a[3].text;
-  od1.value = Questions[id].a[0].isCorrect;
-  od2.value = Questions[id].a[1].isCorrect;
-  od3.value = Questions[id].a[2].isCorrect;
-  od4.value = Questions[id].a[3].isCorrect;
-  //timer
-  clock = setInterval(() => {
-    if (desec % 5 == 0 && sec % 9 == 0 && desec != 0 && sec != 0) {
-      sec = 0;
-      desec = 0;
-      min++;
-    } else if (sec % 9 == 0 && sec != 0) {
-      sec = 0;
-      desec++;
-    } else {
-      sec++;
-    }
-    timer.innerHTML = `${min}:${desec}${sec}`;
-  }, 1000);
-});
-
-let selected = "";
-//selector
-od1.addEventListener("click", () => {
-  od1.style.backgroundColor = "lightgoldenrodyellow";
-  od2.style.backgroundColor = "lightskyblue";
-  od3.style.backgroundColor = "lightskyblue";
-  od4.style.backgroundColor = "lightskyblue";
-  selected = od1.value;
-});
-
-od2.addEventListener("click", () => {
-  od1.style.backgroundColor = "lightskyblue";
-  od2.style.backgroundColor = "lightgoldenrodyellow";
-  od3.style.backgroundColor = "lightskyblue";
-  od4.style.backgroundColor = "lightskyblue";
-  selected = od2.value;
-});
-
-od3.addEventListener("click", () => {
-  od1.style.backgroundColor = "lightskyblue";
-  od2.style.backgroundColor = "lightskyblue";
-  od3.style.backgroundColor = "lightgoldenrodyellow";
-  od4.style.backgroundColor = "lightskyblue";
-  selected = od3.value;
-});
-
-od4.addEventListener("click", () => {
-  od1.style.backgroundColor = "lightskyblue";
-  od2.style.backgroundColor = "lightskyblue";
-  od3.style.backgroundColor = "lightskyblue";
-  od4.style.backgroundColor = "lightgoldenrodyellow";
-  selected = od4.value;
-});
-
-next.addEventListener("click", () => {
-  if (selected != "") {
-    if (selected == "true") {
-      correct++;
-    } else {
-      log.innerHTML += `${id + 1}. otázka: `;
-      log.innerHTML += `${Questions[id].q}<br>`;
-    }
-    id++;
-    cviceni++;
-
-    question.innerText = Questions[id].q;
-    od1.innerText = Questions[id].a[0].text;
-    od2.innerText = Questions[id].a[1].text;
-    od3.innerText = Questions[id].a[2].text;
-    od4.innerText = Questions[id].a[3].text;
-    od1.value = Questions[id].a[0].isCorrect;
-    od2.value = Questions[id].a[1].isCorrect;
-    od3.value = Questions[id].a[2].isCorrect;
-    od4.value = Questions[id].a[3].isCorrect;
-    od1.style.backgroundColor = "lightskyblue";
-    od2.style.backgroundColor = "lightskyblue";
-    od3.style.backgroundColor = "lightskyblue";
-    od4.style.backgroundColor = "lightskyblue";
-    selected = "";
-    //result
-    if (id == 4) {
-      clearInterval(clock);
-      let b = (100 * correct) / 4;
-      quiz.style.display = "none";
-      next.style.display = "none";
-      points.style.display = "flex";
-      if (log.innerHTML != "") {
-        wrongcontainer.style.display = "block";
-      }
-      points.innerHTML += `${correct + "/" + id}`;
-      procents.innerHTML += `${b.toFixed(1)}%`;
-      title.style.marginBottom = "125px";
-      end.style.display = "block";
-    }
-  }
-});
+];*/

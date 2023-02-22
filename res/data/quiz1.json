@@ -1,0 +1,40 @@
+[
+    {
+        "id": 0,
+        "q": "Jaké maximální napětí naměříme v počítači",
+        "isCorrect": ["false", "true", "false", "false"],
+        "text": ["10V", "12V", "8V", "20V"]
+    },
+    {
+        "id": 1,
+        "q": "Jakou barvu mají kabely s 12V",
+        "isCorrect": ["false", "false", "false", "true"],
+        "text": ["Zelenou", "Oranžovou", "Červenou", "Žlutou"]
+    },
+    {
+        "id": 2,
+        "q": "Co je z toho volatilní",
+        "isCorrect": ["false", "false", "true", "false"],
+        "text": ["HDD", "SSD", "RAM", "Flash-disk"]
+    },
+    {
+        "id": 3,
+        "q": "Z čeho se vyrábí procesor(CPU)",
+        "isCorrect": ["true", "false", "false", "false"],
+        "text": ["Křemíku", "Dřeva", "Bronzu", "Hliníku"]
+    },
+    {
+        "id": 4,
+        "q": "testing",
+        "isCorrect": ["false", "false", "false", "true"],
+        "text": ["ahoj", "cau", "nazdar", "sadf"]
+    },
+    {
+        "id": 5,
+        "q": "end",
+        "isCorrect": ["", "", "", ""],
+        "text": ["", "", "", ""],
+        "numq": 5,
+        "info": "TOHLE POSLEDNÍ TU MUSÍ BÝT FURT!!!!!!"
+    }
+]
