@@ -1,5 +1,6 @@
 const start = document.getElementById("start");
 const hard = document.getElementById("hard");
+const qnum = document.getElementById("qnum");
 const title = document.getElementById("name");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
@@ -33,7 +34,9 @@ function viewquest() {
     }
     else if (id == 30){
       hard.innerHTML = "Konec quizu";
+      qnum.style.display = "none";
     }
+    qnum.innerHTML = `${id+1}/30`
   }, 1);
 }
 
@@ -47,6 +50,7 @@ window.onload = async () => {
   start.addEventListener("click", () => {
     viewquest();
     hard.style.display = "block";
+    qnum.style.display = "block";
     start.style.display = "none";
     quiz.style.display = "block";
     next.style.display = "flex";

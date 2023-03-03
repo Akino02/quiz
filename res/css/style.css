@@ -36,7 +36,7 @@
   display: none;
   margin-top: 125px;
 }
-#hard{
+#hard, #qnum{
   display: none;
 }
 #question {
