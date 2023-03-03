@@ -1,4 +1,5 @@
 const start = document.getElementById("start");
+const hard = document.getElementById("hard");
 const title = document.getElementById("name");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
@@ -23,14 +24,29 @@ let min = 0;
 let demin = 0;
 let clock;
 
+function viewquest() {
+  setInterval(() => {
+    if (id == 10) {
+      hard.innerHTML = "HTML/CSS/JS"
+    } else if (id == 20) {
+      hard.innerHTML = "Java"
+    }
+    else if (id == 30){
+      hard.innerHTML = "Konec quizu";
+    }
+  }, 1);
+}
+
 window.onload = async () => {
   const file = await fetch("./res/data/quiz1.json");
 
   const Questions = await file.json(file);
 
-  console.log(Questions[5].numq)
+  console.log(Questions[30].numq);
 
   start.addEventListener("click", () => {
+    viewquest();
+    hard.style.display = "block";
     start.style.display = "none";
     quiz.style.display = "block";
     next.style.display = "flex";
@@ -61,7 +77,7 @@ window.onload = async () => {
       timer.innerHTML = `${min}:${desec}${sec}`;
     }, 1000);
   });
-  
+
   let selected = "";
   //selector
   od1.addEventListener("click", () => {
@@ -71,7 +87,7 @@ window.onload = async () => {
     od4.style.backgroundColor = "lightskyblue";
     selected = od1.value;
   });
-  
+
   od2.addEventListener("click", () => {
     od1.style.backgroundColor = "lightskyblue";
     od2.style.backgroundColor = "lightgoldenrodyellow";
@@ -79,7 +95,7 @@ window.onload = async () => {
     od4.style.backgroundColor = "lightskyblue";
     selected = od2.value;
   });
-  
+
   od3.addEventListener("click", () => {
     od1.style.backgroundColor = "lightskyblue";
     od2.style.backgroundColor = "lightskyblue";
@@ -87,7 +103,7 @@ window.onload = async () => {
     od4.style.backgroundColor = "lightskyblue";
     selected = od3.value;
   });
-  
+
   od4.addEventListener("click", () => {
     od1.style.backgroundColor = "lightskyblue";
     od2.style.backgroundColor = "lightskyblue";
@@ -96,15 +112,24 @@ window.onload = async () => {
     selected = od4.value;
   });
 
-  let check = Questions[5].numq;
+  let check = Questions[30].numq; //tady se napíše poslední otázka a kolik tam je otázek
 
   next.addEventListener("click", () => {
     if (selected != "") {
       if (selected == "true") {
         correct++;
       } else {
-        log.innerHTML += `${id + 1}. otázka: `;
-        log.innerHTML += `${Questions[id].q}<br>`;
+        log.innerHTML += `${cviceni}. otázka: `;
+        log.innerHTML += `${Questions[id].q}. `;
+        if (od1.value == "true") {
+          log.innerHTML += `Správně je ${Questions[id].text[0]}<br>`;
+        } else if (od2.value == "true") {
+          log.innerHTML += `Správně je ${Questions[id].text[1]}<br>`;
+        } else if (od3.value == "true") {
+          log.innerHTML += `Správně je ${Questions[id].text[2]}<br>`;
+        } else if (od4.value == "true") {
+          log.innerHTML += `Správně je ${Questions[id].text[3]}<br>`;
+        }
       }
       id++;
       cviceni++;
@@ -141,51 +166,3 @@ window.onload = async () => {
     }
   });
 };
-//quetions
-/*const Questions = [
-  {
-    id: 0,
-    q: "Jaké maximální napětí naměříme v počítači",
-    a: [
-      { text: "10V", isCorrect: false },
-      { text: "12V", isCorrect: true },
-      { text: "8V", isCorrect: false },
-      { text: "20V", isCorrect: false },
-    ],
-  },
-  {
-    id: 1,
-    q: "Jakou barvu mají kabely s 12V",
-    a: [
-      { text: "Zelenou", isCorrect: false },
-      { text: "Oranžovou", isCorrect: false },
-      { text: "Červenou", isCorrect: false },
-      { text: "Žlutou", isCorrect: true },
-    ],
-  },
-  {
-    id: 2,
-    q: "Co je z toho volatilní",
-    a: [
-      { text: "HDD", isCorrect: false },
-      { text: "SDD", isCorrect: false },
-      { text: "RAM", isCorrect: true },
-      { text: "Flash-disk", isCorrect: false },
-    ],
-  },
-  {
-    id: 3,
-    q: "Z čeho se vyrábí procesor(CPU)",
-    a: [
-      { text: "Křemíku", isCorrect: true },
-      { text: "Dřeva", isCorrect: false },
-      { text: "Bronzu", isCorrect: false },
-      { text: "Hliníku", isCorrect: false },
-    ],
-  },
-  {
-    id: 4,
-    q: "end",
-    a: [{ text: "" }, { text: "" }, { text: "" }, { text: "" }],
-  },
-];*/

@@ -1,40 +1,194 @@
 [
-    {
-        "id": 0,
-        "q": "Jaké maximální napětí naměříme v počítači",
-        "isCorrect": ["false", "true", "false", "false"],
-        "text": ["10V", "12V", "8V", "20V"]
-    },
-    {
-        "id": 1,
-        "q": "Jakou barvu mají kabely s 12V",
-        "isCorrect": ["false", "false", "false", "true"],
-        "text": ["Zelenou", "Oranžovou", "Červenou", "Žlutou"]
-    },
-    {
-        "id": 2,
-        "q": "Co je z toho volatilní",
-        "isCorrect": ["false", "false", "true", "false"],
-        "text": ["HDD", "SSD", "RAM", "Flash-disk"]
-    },
-    {
-        "id": 3,
-        "q": "Z čeho se vyrábí procesor(CPU)",
-        "isCorrect": ["true", "false", "false", "false"],
-        "text": ["Křemíku", "Dřeva", "Bronzu", "Hliníku"]
-    },
-    {
-        "id": 4,
-        "q": "testing",
-        "isCorrect": ["false", "false", "false", "true"],
-        "text": ["ahoj", "cau", "nazdar", "sadf"]
-    },
-    {
-        "id": 5,
-        "q": "end",
-        "isCorrect": ["", "", "", ""],
-        "text": ["", "", "", ""],
-        "numq": 5,
-        "info": "TOHLE POSLEDNÍ TU MUSÍ BÝT FURT!!!!!!"
-    }
+  {
+    "id": 0,
+    "q": "Jaké maximální napětí naměříme v počítači",
+    "isCorrect": ["false", "true", "false", "false"],
+    "text": ["10V", "12V", "8V", "20V"]
+  },
+  {
+    "id": 1,
+    "q": "Jakou barvu mají kabely s 12V",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["Zelenou", "Oranžovou", "Červenou", "Žlutou"]
+  },
+  {
+    "id": 2,
+    "q": "Co je z toho volatilní",
+    "isCorrect": ["false", "false", "true", "false"],
+    "text": ["HDD", "SSD", "RAM", "Flash-disk"]
+  },
+  {
+    "id": 3,
+    "q": "Z čeho se vyrábí procesor(CPU)",
+    "isCorrect": ["true", "false", "false", "false"],
+    "text": ["Křemíku", "Dřeva", "Bronzu", "Hliníku"]
+  },
+  {
+    "id": 4,
+    "q": "Jaký typ zdroje neexistuje",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["Titánium", "Silver", "Platinum", "Meď"]
+  },
+  {
+    "id": 5,
+    "q": "Kolik Voltů nám proudí v zásuvce (EU)",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["260V", "250V", "240V", "230V"]
+  },
+  {
+    "id": 6,
+    "q": "Jaký formát základní desky je špatně",
+    "isCorrect": ["false", "true", "false", "false"],
+    "text": ["EATX", "MINY ATX", "ATX", "MICRO ATX"]
+  },
+  {
+    "id": 7,
+    "q": "Kolik Hz máme v zásuvce (EU)",
+    "isCorrect": ["true", "false", "false", "false"],
+    "text": ["50Hz", "60Hz", "40Hz", "30Hz"]
+  },
+  {
+    "id": 8,
+    "q": "Jaký typ portu neexistuje",
+    "isCorrect": ["false", "true", "false", "false"],
+    "text": ["DVI-D", "DWA", "DVI-I", "VGA"]
+  },
+  {
+    "id": 9,
+    "q": "Jaký typ monitoru neexituje",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["CRT", "OLED", "CRT", "CQT"]
+  },
+  
+  {
+    "id": 10,
+    "q": "Jaký je první tag v HTML",
+    "isCorrect": ["false", "true", "false", "false"],
+    "text": ["<!DOCTYPE>", "<!DOCTYPE html>", "<DOCTYPE html>", "<html>"]
+  },
+  {
+    "id": 11,
+    "q": "Co z toho není párový tag",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["<li>", "<p>", "<ul>", "<link>"]
+  },
+  {
+    "id": 12,
+    "q": "Jakým příkazem změníme barvu písma v CSS",
+    "isCorrect": ["false", "false", "true", "false"],
+    "text": ["font-family", "font-color", "color", "background-color"]
+  },
+  {
+    "id": 13,
+    "q": "Co musí obsahovat kostra HTML (párový tag)",
+    "isCorrect": ["true", "false", "false", "false"],
+    "text": ["head", "header", "footer", "nav"]
+  },
+  {
+    "id": 14,
+    "q": "Jakým párovým tagem se ukončuje kostra v HTML",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["body", "head", "footer", "html"]
+  },
+  
+  {
+    "id": 15,
+    "q": "Jak se označuje class v CSS",
+    "isCorrect": ["false", "true", "false", "false"],
+    "text": ["class", ".", "#", "id"]
+  },
+  {
+    "id": 16,
+    "q": "Jak napsat proměnnou v JS",
+    "isCorrect": ["true", "false", "false", "false"],
+    "text": ["let x = 0;","int x = 0;","double x = 0;","long x = 0;"]
+  },
+  {
+    "id": 17,
+    "q": "Jaký je univerzální datový typ v JS",
+    "isCorrect": ["false", "false", "true", "false"],
+    "text": ["const", "let", "var", "log"]
+  },
+  {
+    "id": 18,
+    "q": "Co z tohe je or v podmínce, v JS",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["!", "$", "&&", "||"]
+  },
+  {
+    "id": 19,
+    "q": "Jakým operátorem v JS přidám proměnné číslo",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["/", "%", "*=", "+="]
+  },
+
+  {
+    "id": 20,
+    "q": "Jaký datový typ je univerzální v Javě",
+    "isCorrect": ["true", "false", "false", "false"],
+    "text": ["var", "char", "boolean", "let"]
+  },
+  {
+    "id": 21,
+    "q": "Co z toho je aritmetický operátor v javě",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["+=", "==", "++", "%"]
+  },
+  {
+    "id": 22,
+    "q": "Jaký cykl v javě má přesný počet opakování",
+    "isCorrect": ["false", "false", "true", "false"],
+    "text": ["switch", "do while", "for", "while"]
+  },
+  {
+    "id": 23,
+    "q": "Jaká firma spravuje Javu",
+    "isCorrect": ["true", "false", "false", "false"],
+    "text": ["Oracle", "Microsoft", "Mojang", "Sony"]
+  },
+  {
+    "id": 24,
+    "q": "Jaký způsob zápisu algoritmu neexistuje",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["Slovním", "Matematickým", "Vývoj. diagramem", "Ternárním"]
+  },
+  
+  {
+    "id": 25,
+    "q": "Jak se zapisuje zkratka pro zapsání System.out.println() v Intellij idea",
+    "isCorrect": ["false", "true", "false", "false"],
+    "text": ["south", "sout", "north", "east"]
+  },
+  {
+    "id": 26,
+    "q": "Jaký cykl se splní minimálně jednou a podmínka je na konci v Javě",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["while","switch", "for", "do while"]
+  },
+  {
+    "id": 27,
+    "q": "Co překládá bytecode na strojový kód za běhu",
+    "isCorrect": ["false", "false", "true", "false"],
+    "text": ["JDK", "JRE", "JIT", "JVM"]
+  },
+  {
+    "id": 28,
+    "q": "Jaký z těchto jazyků nepatří do abstrakce vyšší",
+    "isCorrect": ["true", "false", "false", "false"],
+    "text": ["Assebler", "Python", "C", "Java"]
+  },
+  {
+    "id": 29,
+    "q": "Kde je pole zapsáno špatně",
+    "isCorrect": ["false", "false", "false", "true"],
+    "text": ["int[][] x = {{1,2,3},{4,5,6}};", "int[] x = {20,3,8};", "int[] x = {1,2,3};", "int x = {1,2,3};"]
+  },
+  {
+    "id": 30,
+    "q": "end",
+    "isCorrect": ["", "", "", ""],
+    "text": ["", "", "", ""],
+    "numq": 30,
+    "info": "TOHLE POSLEDNÍ TU MUSÍ BÝT FURT!!!!!! TÍM SE TO UKONČUJE"
+  }
 ]
