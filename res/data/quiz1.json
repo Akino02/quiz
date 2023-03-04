@@ -99,7 +99,7 @@
   },
   {
     "id": 16,
-    "q": "Jak napsat proměnnou v JS",
+    "q": "Co je z toho proměnná, z JS",
     "isCorrect": ["true", "false", "false", "false"],
     "text": ["let x = 0;","int x = 0;","double x = 0;","long x = 0;"]
   },
