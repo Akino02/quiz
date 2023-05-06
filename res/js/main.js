@@ -29,16 +29,20 @@ let demin = 0;
 let clock;
 
 let lastselect;
+let typeofquiz = 0;
 
 function viewquest() {
   setInterval(() => {
-    if (id == 10) {
+    if (id == 10 && typeofquiz == 1) {
       hard.innerHTML = "HTML/CSS/JS";
-    } else if (id == 20) {
+    } else if (id == 20 && typeofquiz == 1) {
       hard.innerHTML = "Java";
     } else if (id == 30) {
       hard.innerHTML = "Konec quizu";
       qnum.style.display = "none";
+    }
+    else if(id == 0 && typeofquiz == 2){
+      hard.innerHTML = "Sítě";
     }
     qnum.innerHTML = `${id + 1}/30`;
   }, 1);
@@ -261,7 +265,7 @@ function drawingLoop() {
 //konec canvasu
 
 window.onload = async () => {
-  let typeofquiz = 0;
+  typeofquiz = 0;
 //udělat lepší podmínku pro kontrolu JSON
   typequiz[0].addEventListener("click", () => {
     typeofquiz = 1;
