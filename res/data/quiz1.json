@@ -70,7 +70,7 @@
     "id": 11,
     "q": "Co z toho není párový tag",
     "isCorrect": ["false", "false", "false", "true"],
-    "text": ["<li>", "<p>", "<ul>", "<link>"]
+    "text": ["li", "p", "ul", "link"]
   },
   {
     "id": 12,

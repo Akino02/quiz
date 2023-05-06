@@ -1,0 +1,192 @@
+[
+    {
+      "id": 0,
+      "q": "Z jaké topologie vzniká stromová?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["Hvězdicová", "Sběrnicová", "Keřová", "Sériová"]
+    },
+    {
+      "id": 1,
+      "q": "Co je to WAN",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["vesnická počítačová síť", "lokální počítačová síť", "metropolitní počítačová síť", "světová počítačová síť"]
+    },
+    {
+      "id": 2,
+      "q": "Nedůvěryhodné propojení sítě je to prostředek propojení několika počítačů pomocí veřejné sítě. Co to je",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["veřejná síť", "privátní síť", "VPN", "VVN"]
+    },
+    {
+      "id": 3,
+      "q": "Kolik vodičů je potřeba u metalického vedení minimálně pro přenost dat?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["1", "2", "3", "4"]
+    },
+    {
+      "id": 4,
+      "q": "Co je z toho nestíněná dvojlinka(twisted pair)",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["TP", "STP", "UDP", "UTP"]
+    },
+    {
+      "id": 5,
+      "q": "Co je to RJ-45",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["Kleště", "typ kabelu", "typ koncovky", "pořadí barev"]
+    },
+    {
+      "id": 6,
+      "q": "Na Jakou topologii byl navržen Ethernet kabel?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["Sběrnicovou", "Hvězdicovou", "Stromovou", "Keřovou"]
+    },
+    {
+      "id": 7,
+      "q": "Jakým písmenem se označuje cívka ve schématech?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["C", "R", "G", "L"]
+    },
+    {
+      "id": 8,
+      "q": "Jaká je maximální délka TP kabelu?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["90m", "100m", "10m", "neurčeno"]
+    },
+    {
+      "id": 9,
+      "q": "Jaký je průměr jádra a pláště u jednovidového kabelu?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["5/125 mikrometrů", "50/125 mikrometrů", "62,5/125 mikrometrů", "9/125 mikrometrů"]
+    },
+    {
+      "id": 10,
+      "q": "Jak se nazývá způsob spojování optického vlákna pomocí tavení? (odborně)",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["tavení", "fúze", "Mechanické spojování", "Konektor"]
+    },
+    {
+      "id": 11,
+      "q": "Jaká věc umožňuje převést datový signál mezi různými druhy sítí?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["MiniGBIC", "SFP", "GBIC", "Mediakonvertor"]
+    },
+    {
+      "id": 12,
+      "q": "Jaká věc převádí elektrický digitální signál na signál optický a naopak?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["MiniGBIC", "SFP", "GBIC", "Mediakonvertor"]
+    },
+    {
+      "id": 13,
+      "q": "Na jaké vrstvě se nachází switch(přepínač)?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["Data-link(linkové)", "Physical(fyzické)", "Network(síťové)", "Application(aplikační)"]
+    },
+    {
+      "id": 14,
+      "q": "Může vysílat a přijímat najednou",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["duplex", "quater duplex", "half duplex", "full duplex"]
+    },
+    {
+      "id": 15,
+      "q": "O co se zajímá IEEE 802.3x",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["Wi-Fi sítě", "Ethernetové sítě", "správu rádiového spektra", "Komunikaci s podzemím"]
+    },
+    {
+      "id": 16,
+      "q": "Rozsah 2,4GHz pásma je ...",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["2400-2483,5GHz","2400-2500MHz","chyba","2400-2483,5MHz"]
+    },
+    {
+      "id": 17,
+      "q": "Kolik kanálů má 5GHz pásmo?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["13", "20", "19", "15"]
+    },
+    {
+      "id": 18,
+      "q": "Jaká je šířka 5MHz podpásma 5150-5250GHz",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["100MHz", "83,5MHz", "255MHz", "chyba"]
+    },
+    {
+      "id": 19,
+      "q": "Když přidám TCP nebo UDP hlavičku, tak mi vznikne ...",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["Směrovač", "Ethernetový rámec", "IP paket", "TCP segment"]
+    },
+  
+    {
+      "id": 20,
+      "q": "Ochrana před zacyklením, pokud bude jeho hodnota nula tak se zahodí. Co to je?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["TTL", "JIT", "SFD", "SFP"]
+    },
+    {
+      "id": 21,
+      "q": "Vzdálenost mezi dvěma routery a ubývá s jednotlivými návštěvami routeru. Co to je?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["DSSS", "FHSS", "ARP", "hop"]
+    },
+    {
+      "id": 22,
+      "q": "Zasahuje klasický router do IP hlavičky?",
+      "isCorrect": ["true", "false", "true", "false"],
+      "text": ["Ano", "Ne", "Ano", "Ne"]
+    },
+    {
+      "id": 23,
+      "q": "Síťový protokol, který se používá pro mapování Mac adres na Ip adresy. Co to je?",
+      "isCorrect": ["true", "false", "false", "true"],
+      "text": ["ACK", "SFD", "SFP", "ARP"]
+    },
+    {
+      "id": 24,
+      "q": "Router pracuje na jaké vrstvě?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["Physical(fyzické)", "Data-link(linkové)", "Network(síťové)", "Transport(transportní)"]
+    },
+    
+    {
+      "id": 25,
+      "q": "Bridge pracuje na jaké vrstě?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["Physical(fyzické)","Data-link(linkové)", "Network(síťové)", "Transport(transportní)"]
+    },
+    {
+      "id": 26,
+      "q": "Repeater pracuje na jaké vrstě?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["Physical(fyzické)","Data-link(linkové)", "Network(síťové)", "Transport(transportní)"]
+    },
+    {
+      "id": 27,
+      "q": "Pro potvrzení(navázání) spojení v hlavičce TCP segmentu se používá jaká zkratka?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["ACK", "SYN", "RST", "FIN"]
+    },
+    {
+      "id": 28,
+      "q": "Pokud příjemce nechce navázat komunikaci v hlavičce TPC segmentu tak se použije jáká zkratka?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["ACK", "SYN", "RST", "FIN"]
+    },
+    {
+      "id": 29,
+      "q": "Barva kabelů v T568B je... (začátek písmen barev)(-->)",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["O,OB,Z,M,MB,ZB,H,HB", "OB,O,ZB,MB,M,Z,HB,H", "OB,O,ZB,M,MB,Z,H,HB", "OB,O,ZB,M,MB,Z,HB,H"]
+    },
+    {
+      "id": 30,
+      "q": "end",
+      "isCorrect": ["", "", "", ""],
+      "text": ["", "", "", ""],
+      "numq": 30,
+      "info": "TOHLE POSLEDNÍ TU MUSÍ BÝT FURT!!!!!! TÍM SE TO UKONČUJE"
+    }
+  ]

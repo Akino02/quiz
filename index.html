@@ -4,16 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="./res/css/style.css" />
   </head>
   <body>
     <div id="leaderboard"></div>
+    <canvas></canvas>
     <div id="container">
       <div id="name">
-        Quiz
-        <p id="hard">Hardware</p>
-        <p id="qnum">1/30</p>
+        <div class="name-wrapper">
+          <div class="pagename">Quiz</div>
+          <p id="hard">Hardware</p>
+          <p id="qnum">1/30</p>
+        </div>
+      </div>
+      <!--
+      <div id="input">
+        <input
+          type="text"
+          style="text-align: center"
+          name="Username"
+          placeholder="Username"
+          id="username"
+          maxlength="10"
+        />
+        <div id="setusername">Set Username</div>
+      </div>-->
+      <div id="typeofquiz">
+        <p>Vyberte si téma quizu</p>
+        <div class="typeofquiz-wrapper">
+          <div class="typequiz" >Hardware,HTML/CSS/JS,Java</div>
+          <div class="typequiz">Sítě</div>
+        </div>
       </div>
       <div id="start" value="0">Start</div>
       <div id="quiz">
@@ -29,6 +51,7 @@
           </div>
         </div>
         <div id="next">Dalsi</div>
+        <!--<div id="backtomenu">Menu</div>-->
       </div>
       <table id="end">
         <tr>
@@ -45,6 +68,10 @@
         <h3>Špatné odpovědi:</h3>
         <div id="log"></div>
       </div>
+      <div id="backtomenu">Back to menu</div>
+      <footer>
+        <div id="clock"></div>
+      </footer>
     </div>
     <script src="./res/js/main.js"></script>
   </body>
