@@ -249,3 +249,20 @@ footer {
     width: 100%;
   }
 }
+/*Scrollbar*/
+::-webkit-scrollbar{
+  width: 13px;
+}
+::-webkit-scrollbar-track{
+  background: rgb(133, 133, 133);
+  border-radius: 100vw;
+
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(77, 77, 77);
+  border-radius: 100vw;
+  border: 2px solid rgb(133, 133, 133);
+}
+::-webkit-scrollbar-thumb:hover{
+  background: hsl(0, 0%, 17%);
+}
