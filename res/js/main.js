@@ -29,7 +29,7 @@ let demin = 0;
 let clock;
 
 let lastselect;
-let typeofquiz = 0;
+let typeofquiz;
 
 function viewquest() {
   setInterval(() => {
@@ -387,7 +387,12 @@ window.onload = async () => {
         correct++;
       } else {
         log.innerHTML += `${cviceni}. otázka: `;
-        log.innerHTML += `${Questions[id].q}. `;
+        if(typeofquiz == 1){
+          log.innerHTML += `${Questions[id].q}. `;
+        }
+        else if(typeofquiz == 2){
+          log.innerHTML += `${Questions2[id].q}. `;
+        }
         if (typeofquiz == 1) {
           if (od1.value == "true") {
             log.innerHTML += `Správně je ${Questions[id].text[0]}<br>`;
@@ -402,6 +407,7 @@ window.onload = async () => {
             log.innerHTML += `Správně je ${Questions[id].text[3]}<br>`;
             log.innerHTML += `Vy jste dal ${Questions[id].text[lastselect]}<br>`;
           }
+          console.log("CHYBA")
         } else if (typeofquiz == 2) {
           if (od1.value == "true") {
             log.innerHTML += `Správně je ${Questions2[id].text[0]}<br>`;
