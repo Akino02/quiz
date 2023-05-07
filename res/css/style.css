@@ -234,6 +234,7 @@ footer {
   #answers {
     display: block;
     width: 100%;
+    /*margin-bottom: -10px;*/
   }
   #name {
     margin-top: 0px;
