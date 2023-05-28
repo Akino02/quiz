@@ -536,7 +536,7 @@ window.onload = async () => {
 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
-  document.title = "Are you finished ?";
+  document.title = "Are_you_done?";
 });
 window.addEventListener("focus", () => {
   document.title = docTitle;
