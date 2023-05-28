@@ -1,0 +1,194 @@
+[
+    {
+      "id": 0,
+      "q": "Jaký port má HTTP",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["443", "80", "20", "21"]
+    },
+    {
+      "id": 1,
+      "q": "Jakou barvu mají kabely s 12V",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["Zelenou", "Oranžovou", "Červenou", "Žlutou"]
+    },
+    {
+      "id": 2,
+      "q": "Co je to RJ-45",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["typ kabelu", "typ koncovky", "Kleště", "pořadí barev"]
+    },
+    {
+      "id": 3,
+      "q": "Jaký port má HTTPS",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["443", "20", "21", "80"]
+    },
+    {
+      "id": 4,
+      "q": "Jaký typ zdroje neexistuje",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["Titánium", "Silver", "Platinum", "Meď"]
+    },
+    {
+      "id": 5,
+      "q": "Jaká je maximální délka TP kabelu?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["100m", "90m", "je to jedno", "100cm"]
+    },
+    {
+      "id": 6,
+      "q": "Jaký formát základní desky je špatně",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["EATX", "MINY ATX", "ATX", "MICRO ATX"]
+    },
+    {
+      "id": 7,
+      "q": "Kolik Hz máme v zásuvce (EU)",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["50Hz", "60Hz", "40Hz", "30Hz"]
+    },
+    {
+      "id": 8,
+      "q": "Síťový protokol, který se používá pro mapování Mac adres na Ip adresy. Co to je?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["ARP", "ACK", "SFP", "SFD"]
+    },
+    {
+      "id": 9,
+      "q": "Jaký je port SSH",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["23", "20", "21", "22"]
+    },
+    
+    {
+      "id": 10,
+      "q": "Jaká je dnes verze SSH",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["SSH-2", "SSH-1", "SSH-3", "SSH-23"]
+    },
+    {
+      "id": 11,
+      "q": "World Wide Web je zkratka",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["WWW", "WBS", "WB", "WBW"]
+    },
+    {
+      "id": 12,
+      "q": "Na Jakou topologii byl navržen Ethernet kabel?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["Stromovou", "Hvězdicovou", "Sběrnicovou", "Keřovou"]
+    },
+    {
+      "id": 13,
+      "q": "Co musí obsahovat kostra HTML (párový tag)",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["head", "header", "footer", "nav"]
+    },
+    {
+      "id": 14,
+      "q": "Jakým párovým tagem se ukončuje kostra v HTML",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["body", "head", "footer", "html"]
+    },
+    
+    {
+      "id": 15,
+      "q": "Jaký port má TELNET",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["20", "21", "22", "23"]
+    },
+    {
+      "id": 16,
+      "q": "Co je z toho proměnná, z JS",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["let x = 0;","int x = 0;","double x = 0;","long x = 0;"]
+    },
+    {
+      "id": 17,
+      "q": "Jaké porty využívá FTP",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["20/21", "21/22", "22/23", "20"]
+    },
+    {
+      "id": 18,
+      "q": "Co z tohe je or v podmínce, v JS",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["!", "$", "&&", "||"]
+    },
+    {
+      "id": 19,
+      "q": "Barva kabelů v T568B je... (začátek písmen barev)(-->)",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["O,OB,Z,M,MB,ZB,H,HB", "OB,O,ZB,M,MB,Z,HB,H", "OB,O,ZB,M,MB,Z,H,HB", "OB,O,ZB,MB,M,Z,HB,H"]
+    },
+  
+    {
+      "id": 20,
+      "q": "Jaký datový typ je univerzální v Javě",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["var", "char", "boolean", "let"]
+    },
+    {
+      "id": 21,
+      "q": "Co z toho je aritmetický operátor v javě",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["+=", "==", "++", "/"]
+    },
+    {
+      "id": 22,
+      "q": "Rozsah 2,4GHz pásma je ...",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["2400-2483,5MHz","2400-2500MHz","chyba","2400-2483,5GHz"]
+    },
+    {
+      "id": 23,
+      "q": "Jaká firma spravuje Javu",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["Oracle", "Microsoft", "Mojang", "Sony"]
+    },
+    {
+      "id": 24,
+      "q": "Vzdálenost mezi dvěma routery a ubývá s jednotlivými návštěvami routeru. Co to je?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["DSSS", "hop", "ARP", "FHSS"]
+    },
+    
+    {
+      "id": 25,
+      "q": "Jak se zapisuje zkratka pro zapsání System.out.println() v Intellij idea",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["south", "sout", "north", "east"]
+    },
+    {
+      "id": 26,
+      "q": "Jaký cykl se splní minimálně jednou a podmínka je na konci v Javě",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["while","switch", "for", "do while"]
+    },
+    {
+      "id": 27,
+      "q": "Co překládá bytecode na strojový kód za běhu",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["JDK", "JRE", "JIT", "JVM"]
+    },
+    {
+      "id": 28,
+      "q": "Jaký z těchto jazyků nepatří do abstrakce vyšší",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["Assebler", "Python", "C", "Java"]
+    },
+    {
+      "id": 29,
+      "q": "Jaký je průměr jádra a pláště u jednovidového kabelu?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["5/125 mikrometrů", "9/125 mikrometrů", "62,5/125 mikrometrů", "50/125 mikrometrů"]
+    },
+    {
+      "id": 30,
+      "q": "end",
+      "isCorrect": ["", "", "", ""],
+      "text": ["", "", "", ""],
+      "numq": 30,
+      "info": "TOHLE POSLEDNÍ TU MUSÍ BÝT FURT!!!!!! TÍM SE TO UKONČUJE"
+    }
+  ]

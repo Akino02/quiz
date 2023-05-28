@@ -44,6 +44,9 @@ function viewquest() {
     else if(id == 0 && typeofquiz == 2){
       hard.innerHTML = "Sítě";
     }
+    else if(id == 0 && typeofquiz == 3){
+      hard.innerHTML = "Mix";
+    }
     qnum.innerHTML = `${id + 1}/30`;
   }, 1);
 }
@@ -272,6 +275,7 @@ window.onload = async () => {
     if (typeofquiz == 1) {
       typequiz[0].style.backgroundColor = "lightgrey";
       typequiz[1].style.backgroundColor = "grey";
+      typequiz[2].style.backgroundColor = "grey";
       start.style.display = "flex";
     }
   });
@@ -280,18 +284,31 @@ window.onload = async () => {
     if (typeofquiz == 2) {
       typequiz[1].style.backgroundColor = "lightgrey";
       typequiz[0].style.backgroundColor = "grey";
+      typequiz[2].style.backgroundColor = "grey";
+      start.style.display = "flex";
+    }
+  });
+  typequiz[2].addEventListener("click", () => {
+    typeofquiz = 3;
+    if (typeofquiz == 3) {
+      typequiz[2].style.backgroundColor = "lightgrey";
+      typequiz[1].style.backgroundColor = "grey";
+      typequiz[0].style.backgroundColor = "grey";
       start.style.display = "flex";
     }
   });
 
   const file1 = await fetch("./res/data/quiz1.json");
   const file2 = await fetch("./res/data/quiz2.json");
+  const file3 = await fetch("./res/data/quiz3.json");
 
   const Questions = await file1.json(file1);
   const Questions2 = await file2.json(file2);
+  const Questions3 = await file3.json(file3);
 
   console.log(Questions[30].numq);
   console.log(Questions2[30].numq);
+  console.log(Questions3[30].numq);
 
   start.addEventListener("click", () => {
     viewquest();
@@ -324,6 +341,17 @@ window.onload = async () => {
       od2.value = Questions2[id].isCorrect[1];
       od3.value = Questions2[id].isCorrect[2];
       od4.value = Questions2[id].isCorrect[3];
+    }
+    else if (typeofquiz == 3) {
+      question.innerText = Questions3[id].q;
+      od1.innerText = Questions3[id].text[0];
+      od2.innerText = Questions3[id].text[1];
+      od3.innerText = Questions3[id].text[2];
+      od4.innerText = Questions3[id].text[3];
+      od1.value = Questions3[id].isCorrect[0];
+      od2.value = Questions3[id].isCorrect[1];
+      od3.value = Questions3[id].isCorrect[2];
+      od4.value = Questions3[id].isCorrect[3];
     }
     //timer
     clock = setInterval(() => {
@@ -423,6 +451,21 @@ window.onload = async () => {
             log.innerHTML += `Vy jste dal ${Questions2[id].text[lastselect]}<br>`;
           }
         }
+        else if (typeofquiz == 3) {
+          if (od1.value == "true") {
+            log.innerHTML += `Správně je ${Questions3[id].text[0]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions3[id].text[lastselect]}<br>`;
+          } else if (od2.value == "true") {
+            log.innerHTML += `Správně je ${Questions3[id].text[1]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions3[id].text[lastselect]}<br>`;
+          } else if (od3.value == "true") {
+            log.innerHTML += `Správně je ${Questions3[id].text[2]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions3[id].text[lastselect]}<br>`;
+          } else if (od4.value == "true") {
+            log.innerHTML += `Správně je ${Questions3[id].text[3]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions3[id].text[lastselect]}<br>`;
+          }
+        }
       }
       id++;
       cviceni++;
@@ -448,6 +491,17 @@ window.onload = async () => {
       od2.value = Questions2[id].isCorrect[1];
       od3.value = Questions2[id].isCorrect[2];
       od4.value = Questions2[id].isCorrect[3];
+      }
+      else if(typeofquiz == 3){
+        question.innerText = Questions3[id].q;
+      od1.innerText = Questions3[id].text[0];
+      od2.innerText = Questions3[id].text[1];
+      od3.innerText = Questions3[id].text[2];
+      od4.innerText = Questions3[id].text[3];
+      od1.value = Questions3[id].isCorrect[0];
+      od2.value = Questions3[id].isCorrect[1];
+      od3.value = Questions3[id].isCorrect[2];
+      od4.value = Questions3[id].isCorrect[3];
       }
       od1.style.backgroundColor = "lightskyblue";
       od2.style.backgroundColor = "lightskyblue";
@@ -482,7 +536,7 @@ window.onload = async () => {
 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
-  document.title = "Come back :(";
+  document.title = "Are you finished ?";
 });
 window.addEventListener("focus", () => {
   document.title = docTitle;
