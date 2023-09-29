@@ -1,0 +1,194 @@
+[
+    {
+      "id": 0,
+      "q": "Je Python interpretovaný programovací jazyk ?",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 1,
+      "q": "Jakou příponu souboru má Python ?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": [".py", ".js", ".json", ".java"]
+    },
+    {
+      "id": 2,
+      "q": "Jakou abstrakci má Python",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Vyšší", "Vyšší", "Nižší", "Nižší"]
+    },
+    {
+      "id": 3,
+      "q": "Jak se označuje jednořádkový komentář ? (Python)",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["#", "//", "/**/", "/****/"]
+    },
+    {
+      "id": 4,
+      "q": "Má Python deklaraci proměnné ?",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 5,
+      "q": "Jak se zapisuje mocnění v Pythonu ?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["=*", "*°", "//", "**"]
+    },
+    {
+      "id": 6,
+      "q": "Jak se zapisuje odmocnění v Pythonu ?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["**", "//", "=*", "*°"]
+    },
+    {
+      "id": 7,
+      "q": "Co se píše pokaždé na konec řádku(příkazu) v Pythonu ?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": [";", "nic", "pyco", ";;"]
+    },
+    {
+      "id": 8,
+      "q": "Co je z toho Logický operátor ?",
+      "isCorrect": ["false", "true", "false", "true"],
+      "text": ["Bool", "AND", "True", "OR"]
+    },
+    {
+      "id": 9,
+      "q": "Co se používá místo složených závorek v Pythonu ?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["středník", "složené závorky", "nic", "Tabulátor"]
+    },
+    
+    {
+      "id": 10,
+      "q": "Jak se zapisuje else if v Pythonu ?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["if", "elif", "else if", "else"]
+    },
+    {
+      "id": 11,
+      "q": "Co je z toho Algoritmus",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["Auto", "peníze", "člověk", "recept"]
+    },
+    {
+      "id": 12,
+      "q": "Jak by měl vypadat zápis proměnné v Pythonu ?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["x int = 0", "int x = 0", "x = 0", "x = int 0"]
+    },
+    {
+      "id": 13,
+      "q": "Jak se zapisuje logická hodnota Boolean (pozor na velikosti písma!) v Pythonu",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["Boolean x = true", "Boolean x = True", "x = true", "x = True"]
+    },
+    {
+      "id": 14,
+      "q": "Je Python kompilovaný programovací jazyk ?",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Abo", "Ne", "Ne"]
+    },
+    
+    {
+      "id": 15,
+      "q": "Jak se zapisuje if v Pythonu ?",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["if(podminka):", "if podminka:", "if(podminka){}", "if podminka{}"]
+    },
+    {
+      "id": 16,
+      "q": "Jaký datový typ je určen pro písmena ?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["string","char","int","chachar"]
+    },
+    {
+      "id": 17,
+      "q": "Jaký datový typ je určen pro desetiná číslo ?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["int", "double", "float", "long"]
+    },
+    {
+      "id": 18,
+      "q": "Je to jedno jaké uvozovky použijeme v Pythonu ? (myšleno do páru)",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 19,
+      "q": "Vývojový diagram začíná vždy jakým tvarem ?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["obdelník(oblé rohy)", "obdelník(ostré rohy)", "rovnoběžník", "kosočtverec"]
+    },
+  
+    {
+      "id": 20,
+      "q": "Vývojový diagram končí vždy jakým tvarem ?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["obdelník(oblé rohy)", "obdelník(ostré rohy)", "rovnoběžník", "kosočtverec"]
+    },
+    {
+      "id": 21,
+      "q": "Čím se přidá prvek do listu v Pythonu ?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["append", "lens", "break", "continue"]
+    },
+    {
+      "id": 22,
+      "q": "Break = okamžitě ukončí aktuální cyklus a přejde na kód za ním",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 23,
+      "q": "For = přesný počet opakování",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 24,
+      "q": "Do while = pokud platí podmínka tak se činnost vykoná",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    
+    {
+      "id": 25,
+      "q": "while = splní se minimálně jednou a podmínka je na konci",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 26,
+      "q": "Proměnná je vymezený prostor v paměti pro uložení hodnot",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano","Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 27,
+      "q": "Je pravda, že Java je abstrakce vyšší a je kompilovaná ?",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 28,
+      "q": "Je pravda, že Strojový kód nebo Assemble mají abstrakci vyšší ?",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 29,
+      "q": "Java a Python jsou stejné jazyky ve smyslu abstrakce a překladu",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 30,
+      "q": "end",
+      "isCorrect": ["", "", "", ""],
+      "text": ["", "", "", ""],
+      "numq": 30,
+      "info": "TOHLE POSLEDNÍ TU MUSÍ BÝT FURT!!!!!! TÍM SE TO UKONČUJE"
+    }
+  ]
