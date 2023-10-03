@@ -105,7 +105,7 @@
     },
     {
       "id": 17,
-      "q": "Jaký datový typ je určen pro desetiná číslo ?",
+      "q": "Jaký datový typ je určen pro desetiná číslo v Javě?",
       "isCorrect": ["false", "true", "false", "false"],
       "text": ["int", "double", "float", "long"]
     },
