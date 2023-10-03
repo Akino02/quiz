@@ -99,7 +99,7 @@
     },
     {
       "id": 16,
-      "q": "Jaký datový typ je určen pro písmena ?",
+      "q": "Jaký datový typ je určen pro písmena v Javě ?",
       "isCorrect": ["false", "true", "false", "false"],
       "text": ["string","char","int","chachar"]
     },
