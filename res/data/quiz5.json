@@ -1,0 +1,194 @@
+[
+    {
+      "id": 0,
+      "q": "Jak vypadá funkce ?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["def \"nazev\"():{ scoope}", "def \"nazev\" { scoope}", "function \"nazev\" = { scoope}", "function \"nazev\" { scoope}"]
+    },
+    {
+      "id": 1,
+      "q": "Pokud budu mít vytvořenou pouze funkci, spustí se ?",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 2,
+      "q": "Pokud si do funkce vytvořím parametry, jak bude vypadat funkce ?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["def(x,y) \"nazev\"", "def \"nazev\":{huh}", "def \"nazev\"(x,y):{ scoope}", "def \"nazev\":{x, y}"]
+    },
+    {
+      "id": 3,
+      "q": "Jak se označuje jednořádkový komentář ?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["#", "//", "/**/", "/****/"]
+    },
+    {
+      "id": 4,
+      "q": "Jakým příkazem můžeme přidat do listu hodnotu aniž by nějakou jinou smazala",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["len", "lower", "upper", "append"]
+    },
+    {
+      "id": 5,
+      "q": "metoda sort() slouží pro...",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["sarkasmus", "nic", "seřazení hodnot v listu", "přidaní dalši hodnoty"]
+    },
+    {
+      "id": 6,
+      "q": "Pokud budeme chtít zavolat na funkci, která má parametry tak to bude vypadat...",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["\"nazev\" = () ", "\"nazev\" = (x,y)", "\"nazev\"()", "\"nazev\"(x,y)"]
+    },
+    {
+      "id": 7,
+      "q": "return slouží pro ...",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["ukončení funkce", "sčítání", "vrácení hodnot", "vytvořeni funkce"]
+    },
+    {
+      "id": 8,
+      "q": "Rekurze je, že funkce odkazuje znovu na sebe",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 9,
+      "q": "Pokud budu chtít zavolat na funkci: def \"nazev\"(x,y,z = 0), x=8 a y=9",
+      "isCorrect": ["false", "true", "false", "true"],
+      "text": ["def \"nazev\":", "\"nazev\"(y=9,x=8,0)", "\"nazev\"(9,8,0)", "\"nazev\"(8,9,0)"]
+    },
+    
+    {
+      "id": 10,
+      "q": "Jaká metoda zjišťuje počet znaků v listu či stringu",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["howmuch", "howmany", "len", "zen"]
+    },
+    {
+      "id": 11,
+      "q": "Zápis nové proměnné vypadá... ",
+      "isCorrect": ["true", "false", "true", "false"],
+      "text": ["x = 0", "int x = 0", "x = \"ahoj\"", "string x = \"ahoj\""]
+    },
+    {
+      "id": 12,
+      "q": "Který zápis cyklu for je správný ?",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["for(int i=0;i<5;i++){}", "for (;;)", "for i in x:", "for i in range(x)"]
+    },
+    {
+      "id": 13,
+      "q": "Pokud budu chtít změnit velikost všech znaků ve stringu na malé tak použiju...(funkci pro string))",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["lowertunnel()", "upper()", "uppertunel()", "lower()"]
+    },
+    {
+      "id": 14,
+      "q": "Pokud budu chtít změnit velikost všech prvnich pismen ve stringu na velke tak použiju...(funkci pro string)",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["replace()", "upper()", "title()", "tile()"]
+    },
+    
+    {
+      "id": 15,
+      "q": "Pokud budu chtít rozdělit string podle mezer tak použiju jakou funkci pro string ?",
+      "isCorrect": ["false", "true", "false", "false"],
+      "text": ["trim(\" \")", "split(\" \")", "cut(\" \")", "divide(\" \")"]
+    },
+    {
+      "id": 16,
+      "q": "Parametr se nachází ve funkci",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano","Ano","Ne","Ne"]
+    },
+    {
+      "id": 17,
+      "q": "Argument se nachází ve volání na funkci",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 18,
+      "q": "Pokud budu chtít odebrat zbytečné mezery na začátku a na konci tak použiju jakou funkci pro string ?",
+      "isCorrect": ["true", "false", "false", "false"],
+      "text": ["strip()", "trim()", "split()", "delete(start,end)"]
+    },
+    {
+      "id": 19,
+      "q": "Mohu do jednoho listu psát více datových typů ?",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+  
+    {
+      "id": 20,
+      "q": "Je to správně ? : ahoj = [1, \"ahoj\"]",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 21,
+      "q": "Continue = ukončí provádění aktuálního cyklu a přejde na další vyhodnocení podmínky",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 22,
+      "q": "Break = okamžitě ukončí aktuální cyklus a přejde na kód za ním",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 23,
+      "q": "For = přesný počet opakování",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 24,
+      "q": "while se zapisuje...",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["while \"podminka\":", "while (\"podminka\"):", "while:", "while true:"]
+    },
+    
+    {
+      "id": 25,
+      "q": "while = splní se minimálně jednou a podmínka je na konci",
+      "isCorrect": ["false", "false", "true", "true"],
+      "text": ["Ano", "Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 26,
+      "q": "Proměnná je vymezený prostor v paměti pro uložení hodnot",
+      "isCorrect": ["true", "true", "false", "false"],
+      "text": ["Ano","Ano", "Ne", "Ne"]
+    },
+    {
+      "id": 27,
+      "q": "Chci vypsat pomocí for čísla 1 až 5 včetně těchto čísel, jak to bude vypadat ?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["for x in range(5)", "for x in range(1,5)", "for x from 1 to 5", "for x in range(1,6)"]
+    },
+    {
+      "id": 28,
+      "q": "Pokud chci z listu vypsat poslední tři znaky, tak to napíšu jak ?",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["print(\"nazev\"[-3:])", "print(\"nazev\"[-3:3])", "print(\"nazev\"[-3:])", "print(\"nazev\"[::-1])"]
+    },
+    {
+      "id": 29,
+      "q": "Pokud chci vypsat text obráceně, tak napíšu...",
+      "isCorrect": ["false", "false", "true", "false"],
+      "text": ["print(\"nazev\"[-888])", "print(\"nazev\"[-1])", "print(\"nazev\"[::-1])", "print(\"nazev\"[reverse])"]
+    },
+    {
+      "id": 30,
+      "q": "end",
+      "isCorrect": ["", "", "", ""],
+      "text": ["", "", "", ""],
+      "numq": 30,
+      "info": "TOHLE POSLEDNÍ TU MUSÍ BÝT FURT!!!!!! TÍM SE TO UKONČUJE"
+    }
+  ]

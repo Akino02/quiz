@@ -68,6 +68,16 @@ function worldclock() {
 }
 worldclock();
 
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "Jsi_hotov?";
+  location.reload();
+  alert("Nepodvadis ?")
+});
+window.addEventListener("focus", () => {
+  document.title = docTitle;
+});
+
 let canvaswidth = document.body.offsetWidth;
 let canvasheight = document.body.offsetHeight;
 
@@ -276,6 +286,7 @@ window.onload = async () => {
       typequiz[1].style.backgroundColor = "grey";
       typequiz[2].style.backgroundColor = "grey";
       typequiz[3].style.backgroundColor = "grey";
+      typequiz[4].style.backgroundColor = "grey";
       start.style.display = "flex";
     }
   });
@@ -286,6 +297,7 @@ window.onload = async () => {
       typequiz[0].style.backgroundColor = "grey";
       typequiz[2].style.backgroundColor = "grey";
       typequiz[3].style.backgroundColor = "grey";
+      typequiz[4].style.backgroundColor = "grey";
       start.style.display = "flex";
     }
   });
@@ -296,6 +308,7 @@ window.onload = async () => {
       typequiz[1].style.backgroundColor = "grey";
       typequiz[0].style.backgroundColor = "grey";
       typequiz[3].style.backgroundColor = "grey";
+      typequiz[4].style.backgroundColor = "grey";
       start.style.display = "flex";
     }
   });
@@ -306,6 +319,18 @@ window.onload = async () => {
       typequiz[0].style.backgroundColor = "grey";
       typequiz[1].style.backgroundColor = "grey";
       typequiz[2].style.backgroundColor = "grey";
+      typequiz[4].style.backgroundColor = "grey";
+      start.style.display = "flex";
+    }
+  });
+  typequiz[4].addEventListener("click", () => {
+    typeofquiz = 5;
+    if (typeofquiz == 5) {
+      typequiz[4].style.backgroundColor = "lightgrey";
+      typequiz[0].style.backgroundColor = "grey";
+      typequiz[1].style.backgroundColor = "grey";
+      typequiz[2].style.backgroundColor = "grey";
+      typequiz[3].style.backgroundColor = "grey";
       start.style.display = "flex";
     }
   });
@@ -314,11 +339,13 @@ window.onload = async () => {
   const file2 = await fetch("./res/data/quiz2.json");
   const file3 = await fetch("./res/data/quiz3.json");
   const file4 = await fetch("./res/data/quiz4.json");
+  const file5 = await fetch("./res/data/quiz5.json");
 
   const Questions = await file1.json(file1);
   const Questions2 = await file2.json(file2);
   const Questions3 = await file3.json(file3);
   const Questions4 = await file4.json(file4);
+  const Questions5 = await file5.json(file5);
 
   /*console.log(Questions[30].numq);
   console.log(Questions2[30].numq);
@@ -376,6 +403,17 @@ window.onload = async () => {
       od2.value = Questions4[id].isCorrect[1];
       od3.value = Questions4[id].isCorrect[2];
       od4.value = Questions4[id].isCorrect[3];
+    }
+    else if (typeofquiz == 5) {
+      question.innerText = Questions5[id].q;
+      od1.innerText = Questions5[id].text[0];
+      od2.innerText = Questions5[id].text[1];
+      od3.innerText = Questions5[id].text[2];
+      od4.innerText = Questions5[id].text[3];
+      od1.value = Questions5[id].isCorrect[0];
+      od2.value = Questions5[id].isCorrect[1];
+      od3.value = Questions5[id].isCorrect[2];
+      od4.value = Questions5[id].isCorrect[3];
     }
     //timer
     clock = setInterval(() => {
@@ -502,6 +540,21 @@ window.onload = async () => {
             log.innerHTML += `Vy jste dal ${Questions4[id].text[lastselect]}<br>`;
           }
         }
+        else if (typeofquiz == 5) {
+          if (od1.value == "true") {
+            log.innerHTML += `Správně je ${Questions5[id].text[0]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions5[id].text[lastselect]}<br>`;
+          } else if (od2.value == "true") {
+            log.innerHTML += `Správně je ${Questions5[id].text[1]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions5[id].text[lastselect]}<br>`;
+          } else if (od3.value == "true") {
+            log.innerHTML += `Správně je ${Questions5[id].text[2]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions5[id].text[lastselect]}<br>`;
+          } else if (od4.value == "true") {
+            log.innerHTML += `Správně je ${Questions5[id].text[3]}<br>`;
+            log.innerHTML += `Vy jste dal ${Questions5[id].text[lastselect]}<br>`;
+          }
+        }
       }
       id++;
       cviceni++;
@@ -547,6 +600,17 @@ window.onload = async () => {
         od3.value = Questions4[id].isCorrect[2];
         od4.value = Questions4[id].isCorrect[3];
       }
+      else if (typeofquiz == 5) {
+        question.innerText = Questions5[id].q;
+        od1.innerText = Questions5[id].text[0];
+        od2.innerText = Questions5[id].text[1];
+        od3.innerText = Questions5[id].text[2];
+        od4.innerText = Questions5[id].text[3];
+        od1.value = Questions5[id].isCorrect[0];
+        od2.value = Questions5[id].isCorrect[1];
+        od3.value = Questions5[id].isCorrect[2];
+        od4.value = Questions5[id].isCorrect[3];
+      }
       od1.style.backgroundColor = "lightskyblue";
       od2.style.backgroundColor = "lightskyblue";
       od3.style.backgroundColor = "lightskyblue";
@@ -578,10 +642,9 @@ window.onload = async () => {
   drawingLoop();
 };
 
-let docTitle = document.title;
-window.addEventListener("blur", () => {
-  document.title = "Are_you_done?";
-});
-window.addEventListener("focus", () => {
-  document.title = docTitle;
-});
+/*window.addEventListener("keydown", () => {
+  if(key == "F12" || key == 123){
+    location.reload();
+    alert("Nepodváděj")
+  }
+})*/
