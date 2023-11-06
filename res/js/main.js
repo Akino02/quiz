@@ -641,10 +641,3 @@ window.onload = async () => {
   mousepos();
   drawingLoop();
 };
-
-/*window.addEventListener("keydown", () => {
-  if(key == "F12" || key == 123){
-    location.reload();
-    alert("Nepodváděj")
-  }
-})*/

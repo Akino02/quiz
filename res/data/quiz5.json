@@ -3,7 +3,7 @@
       "id": 0,
       "q": "Jak vypadá funkce ?",
       "isCorrect": ["true", "false", "false", "false"],
-      "text": ["def \"nazev\"():{ scoope}", "def \"nazev\" { scoope}", "function \"nazev\" = { scoope}", "function \"nazev\" { scoope}"]
+      "text": ["def \"nazev\"():{ scope}", "def \"nazev\" { scope}", "function \"nazev\" = { scope}", "function \"nazev\" { scope}"]
     },
     {
       "id": 1,
