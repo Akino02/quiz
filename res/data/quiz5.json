@@ -3,7 +3,7 @@
       "id": 0,
       "q": "Jak vypadá funkce ?",
       "isCorrect": ["true", "false", "false", "false"],
-      "text": ["def \"nazev\"():{ scope}", "def \"nazev\" { scope}", "function \"nazev\" = { scope}", "function \"nazev\" { scope}"]
+      "text": ["def \"nazev\"(): ", "def \"nazev\" { }", "function \"nazev\" = ", "function \"nazev\" { }"]
     },
     {
       "id": 1,
@@ -175,7 +175,7 @@
       "id": 28,
       "q": "Pokud chci z listu vypsat poslední tři znaky, tak to napíšu jak ?",
       "isCorrect": ["false", "false", "true", "false"],
-      "text": ["print(\"nazev\"[-3:])", "print(\"nazev\"[-3:3])", "print(\"nazev\"[-3:])", "print(\"nazev\"[::-1])"]
+      "text": ["print(\"nazev\"[3:])", "print(\"nazev\"[-3:3])", "print(\"nazev\"[-3:])", "print(\"nazev\"[::-1])"]
     },
     {
       "id": 29,
