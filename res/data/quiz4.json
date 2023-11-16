@@ -25,7 +25,7 @@
     },
     {
       "id": 4,
-      "q": "Má Python deklaraci proměnné ?",
+      "q": "Je povinností psát datový typ při tvoření nové proměnné v deklaraci ? (Python)",
       "isCorrect": ["false", "false", "true", "true"],
       "text": ["Ano", "Ano", "Ne", "Ne"]
     },
@@ -37,9 +37,9 @@
     },
     {
       "id": 6,
-      "q": "Jak se zapisuje odmocnění v Pythonu ?",
-      "isCorrect": ["false", "true", "false", "false"],
-      "text": ["**", "//", "=*", "*°"]
+      "q": "Jak se zapisuje dělení se zbytkem v Pythonu ?",
+      "isCorrect": ["false", "false", "false", "true"],
+      "text": ["**", "//", "=*", "/"]
     },
     {
       "id": 7,
@@ -106,7 +106,7 @@
     {
       "id": 17,
       "q": "Jaký datový typ je určen pro desetiná číslo v Javě?",
-      "isCorrect": ["false", "true", "false", "false"],
+      "isCorrect": ["false", "true", "true", "false"],
       "text": ["int", "double", "float", "long"]
     },
     {
